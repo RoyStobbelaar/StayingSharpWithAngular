@@ -1,0 +1,27 @@
+{ "users" : [
+{
+         "name" : "Roy Stobbelaar",
+         "birthdate" : "1989-04-14T09:00:00",
+         "school" : "Windesheim",
+         "image" : "/images/default.png"
+},{
+         "name" : "Kazura Ryozaki",
+         "birthdate" : "1988-02-12T09:00:00",
+         "school" : "Windesheim",
+         "image" : "/images/default.png"
+},{
+         "name" : "Jos Klomp",
+         "birthdate" : "1991-08-21T09:00:00",
+         "school" : "Deltion",
+         "image" : "/images/default.png"
+},{
+         "name" : "Patrick Manskoop",
+         "birthdate" : "1990-07-24T09:00:00",
+         "school" : "Saxion",
+         "image" : "/images/default.png"
+},{
+         "name" : "Niek Bosscher",
+         "birthdate" : "1996-10-10T09:00:00",
+         "school" : "Saxion",
+         "image" : "/images/default.png"
+}]}

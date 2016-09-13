@@ -6,21 +6,9 @@
       </h2>
    </div>
 
-   Orderby:
+   <user-sort></user-sort>
 
-   <ul style="display:inline">
-      <li class="nav">
-         <a href ng-click="usersController.sortType = 'school'">School</a>
-      </li>
-      <li class="nav">
-         <a href ng-click="usersController.sortType = 'name'">Name</a>
-      </li>
-      <li class="nav">
-         <a href ng-click="usersController.sortType = 'birthdate'">Birthdate</a>
-      </li>
-   </ul>
-
-   <div ng-repeat="user in usersController.users | orderBy:usersController.sortType">
+   <div ng-repeat="user in usersController.users.users | orderBy:usersController.sortType">
 
       <user-row></user-row>
       

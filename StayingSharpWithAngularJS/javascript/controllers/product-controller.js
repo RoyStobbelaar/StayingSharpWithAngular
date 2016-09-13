@@ -1,56 +1,20 @@
 ﻿angular.module('tutorialApp')
-.controller('ProductController', function ($routeParams) {
+.controller('ProductController', ['$filter','$http','$routeParams',function ($filter,$http,$routeParams) {
 
    this.id = $routeParams.id;
 
-   /* Create some data here... */
+   var controller = this;
 
    this.text = "This is the default controller.";
 
    console.log(this.id);
 
-   /* Load product info depending on routeparam */
+   $http({ method: 'GET', url: '/data/products.json' }).success(function (data) {
+      /*Get all products -> filter on id*/
+      console.log(data);
+      controller.product = $filter('filter')(data.products, { id: $routeParams.id })[0];
+   });
 
-   this.product = [];
+   console.log(controller);
 
-   switch (this.id) {
-      case '1':
-         console.log("hit switch case");
-
-         this.product = {
-            id: 1,
-            name: "testproduct#1",
-            image: "/images/testproduct.png",
-            price: 41426
-         }
-         break;
-
-      case '2':
-         this.product = {
-            id: 2,
-            name: "testproduct#2",
-            image: "/images/testproduct.png",
-            price: 214
-         }
-         break;
-
-      case '3':
-         this.product = {
-            id: 3,
-            name: "testproduct#3",
-            image: "/images/testproduct.png",
-            price: 5412
-         }
-         break;
-
-      case '4':
-         this.product = {
-            id: 4,
-            name: "testproduct#4",
-            image: "/images/testproduct.png",
-            price: 7454241
-         }
-         break;
-   }
-
-});
+}]);

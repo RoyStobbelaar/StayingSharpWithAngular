@@ -1,40 +1,19 @@
 ﻿angular.module('tutorialApp')
-.controller('ProductsController', function () {
-
-
-   /* Create some data here... */
+.controller('ProductsController', ['$http', function ($http) {
 
    this.text = "Products!";
 
-   this.products = [
-      {
-         id:1,
-         name: "testproduct#1",
-         image: "/images/testproduct.png",
-         price: 41426
-      },
-            {
-               id: 2,
-               name: "testproduct#2",
-               image: "/images/testproduct.png",
-               price: 214
-            },
-                  {
-                     id: 3,
-                     name: "testproduct#3",
-                     image: "/images/testproduct.png",
-                     price: 5412
-                  },
-                        {
-                           id: 4,
-                           name: "testproduct#4",
-                           image: "/images/testproduct.png",
-                           price: 7454241
-                        }
+   var controller = this;
+   controller.products = [];
 
-   ];
+   /*Retrieve product data*/
+   $http({ method: 'GET', url: '/data/products.json' }).success(function (data) {
+      controller.products = data;
+      console.log(controller.products);
+   });
+   console.log(controller);
+}])
 
-})
 .directive('productRow', function () {
    return {
       restrict: 'E',

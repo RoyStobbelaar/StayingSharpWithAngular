@@ -6,21 +6,30 @@
       controller: 'ProductsController',
       controllerAs: 'productsController'
    })
-      .when('/products/:id', {
-         templateUrl: '/templates/pages/products/product.html',
-         controller: 'ProductController',
-         controllerAs: 'productController'
-      })
+
+   .when('/products/new', {
+      templateUrl: '/templates/pages/products/newproduct.html',
+      controller: 'ProductCreateController',
+      controllerAs: 'newProductController'
+   })
+
+   .when('/products/:id', {
+      templateUrl: '/templates/pages/products/product.html',
+      controller: 'ProductController',
+      controllerAs: 'productController'
+   })
 
    .when('/users', {
       templateUrl: '/templates/pages/users/index.html',
       controller: 'UsersController',
       controllerAs: 'usersController'
    })
-      .when('/', {
-         templateUrl: '/templates/pages/default.html',
-         controller: 'DefaultController',
-         controllerAs:'defaultController'
-      })
+
+   .when('/', {
+      templateUrl: '/templates/pages/default.html',
+      controller: 'DefaultController',
+      controllerAs: 'defaultController'
+   })
+
    .otherwise({ redirectTo: '/' });
 });
