@@ -1,0 +1,48 @@
+﻿body {
+background-color:#1e1e1e;
+color:#ffffff;
+
+}
+
+.container{
+background-color:#313131;
+}
+
+.content{
+   border:solid #a5a5a5 1px;
+   border-radius:10px;
+   color:#ffffff;
+   padding:10px;
+   margin:5px;
+   background-color:#212124;
+   margin-top:50px;
+}
+
+.header{
+   height:140px;
+   background-color:#2a2a2a;
+   text-align:center;
+   color:#9b9b9b;
+   align-items:center;
+   display:flex;
+   justify-content:center;
+}
+
+.image{
+   max-height:140px;
+}
+
+.portraitImage{
+   width:100px;
+   height:100px;
+}
+
+.jumbotron{
+   color:black;
+      background-color:#9b9b9b;
+
+}
+
+hr{
+   border-top-color:#a5a5a5;
+}
