@@ -6,13 +6,19 @@
       </h2>
    </div>
 
-   <a ng-href="#products/new">New product</a>
+   <!--<a ng-href="#products/new">New product</a>-->
+   <h3>
+      <a ui-sref="stateProducts.new">New product</a> <br />
 
+      <a ui-sref="stateProducts.list">Show products</a>
+   </h3>
 
-   <div ng-repeat="product in productsController.products.products">
+   <div ui-view></div>
+
+   <!--<div ng-repeat="product in productsController.products.products">
 
       <product-row></product-row>
 
-   </div>
+   </div>-->
 
 </div>

@@ -1,5 +1,5 @@
-﻿angular.module('tutorialApp')
-.controller('ProductsController', ['$http', function ($http) {
+﻿//angular.module('tutorialApp', ['ui.router'])
+tutorialApp.controller('ProductsController', ['$http', function ($http) {
 
    this.text = "Products!";
 

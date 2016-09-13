@@ -54,3 +54,20 @@ input{
    min-width:150px;
    padding:10px;
 }
+
+.previewContent{
+
+   margin:5px;
+   padding:5px;
+   border:1px solid #808080;
+   background-color:#313131;
+
+}
+
+.glyphicon{
+   padding:10px;
+}
+
+.left{
+   display:inline-block;
+}

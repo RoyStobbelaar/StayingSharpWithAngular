@@ -1,5 +1,5 @@
-﻿angular.module('tutorialApp')
-.controller('IndexController', function () {
+﻿//angular.module('tutorialApp', ['ui.router'])
+tutorialApp.controller('IndexController', function () {
 
 
    /* Create some data here... */

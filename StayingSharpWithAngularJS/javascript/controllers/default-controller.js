@@ -1,5 +1,5 @@
-﻿angular.module('tutorialApp')
-.controller('DefaultController', function () {
+﻿//angular.module('tutorialApp',['ui.router'])
+tutorialApp.controller('DefaultController', function () {
 
 
    /* Create some data here... */

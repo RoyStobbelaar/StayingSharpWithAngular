@@ -1,7 +1,7 @@
-﻿angular.module('tutorialApp')
-.controller('ProductController', ['$filter','$http','$routeParams',function ($filter,$http,$routeParams) {
+﻿//angular.module('tutorialApp', ['ui.router'])
+tutorialApp.controller('ProductController', ['$filter', '$http', '$stateParams', function ($filter, $http, $stateParams) {
 
-   this.id = $routeParams.id;
+   this.id = $stateParams.id;
 
    var controller = this;
 
@@ -12,7 +12,7 @@
    $http({ method: 'GET', url: '/data/products.json' }).success(function (data) {
       /*Get all products -> filter on id*/
       console.log(data);
-      controller.product = $filter('filter')(data.products, { id: $routeParams.id })[0];
+      controller.product = $filter('filter')(data.products, { id: $stateParams.id })[0];
    });
 
    console.log(controller);

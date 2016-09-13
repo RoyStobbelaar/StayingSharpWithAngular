@@ -1,7 +1,7 @@
 ﻿<hr />
 
-<div class="productInfo">
+<div class="table table-striped">
    <img ng-src="{{product.image}}" class="portraitImage" />
-   <h4><a ng-href="#products/{{product.id}}">Name: {{product.name}}</a></h4>
+   <h4><a ui-sref="stateProducts.product({ id:{{product.id}} })">Name: {{product.name}}</a></h4>
    <h5>Price: {{product.price | currency : '€'}}</h5>
 </div>

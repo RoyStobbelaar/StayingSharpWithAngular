@@ -1,5 +1,15 @@
 ﻿<div class="content">
 
+   <!-- Preview -->
+
+   <div class="previewContent">
+
+      <label>{{newProductController.product.name}}</label><br />
+      <label>{{newProductController.product.price | currency}}</label><br />
+      <img ng-src="{{newProductController.product.image}}" /><br />
+
+   </div>
+
    <form new="newProductForm">
 
       <h4>
@@ -7,12 +17,13 @@
       </h4>
 
       <p>
-         <label class="inputLabel">Name: </label> <input type="text" required /><br />
-         <label class="inputLabel">Price:</label> <input type="number" min="0" required /><br />
-         <label class="inputLabel">ImageURL: </label><input type="text" required /><br />
+         <label class="inputLabel">Id:</label><input ng-model="newProductController.product.id" type="text" readonly/><br/>
+         <label class="inputLabel">Name: </label> <input ng-model="newProductController.product.name" type="text" required /><br />
+         <label class="inputLabel">Price:</label> <input ng-model="newProductController.product.price"  type="number" min="0" required /><br />
+         <label class="inputLabel">ImageURL: </label><input ng-model="newProductController.product.image"  type="text" required /><br />
       </p>
 
-      <button class="btn btn-success">Save product</button>
+      <button class="btn btn-success" ng-click="newProductController.addProduct(newProductController.product)">Save product</button>
 
    </form>
 

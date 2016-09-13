@@ -1,5 +1,5 @@
-﻿angular.module('tutorialApp')
-.controller('UsersController', ['$http',function ($http) {
+﻿//angular.module('tutorialApp', ['ui.router'])
+tutorialApp.controller('UsersController', ['$http', function ($http) {
 
    this.text = "Users!";
 
@@ -10,6 +10,7 @@
    /*Retrieve user data*/
    $http({ method: 'GET', url: '/data/users.json' }).success(function (data) {
       controller.users = data;
+      console.log(controller);
    });
 
 }])

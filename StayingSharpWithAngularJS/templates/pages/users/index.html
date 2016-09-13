@@ -6,12 +6,23 @@
       </h2>
    </div>
 
+   <div >
+
+      <h3>
+         <a ui-sref="stateUsers.list">Show users</a>
+      </h3>
+
+   </div>
+
    <user-sort></user-sort>
 
-   <div ng-repeat="user in usersController.users.users | orderBy:usersController.sortType">
+
+   <div ui-view></div>
+
+   <!--<div ng-repeat="user in usersController.users.users | orderBy:usersController.sortType">
 
       <user-row></user-row>
       
-   </div>
+   </div>-->
 
 </div>
